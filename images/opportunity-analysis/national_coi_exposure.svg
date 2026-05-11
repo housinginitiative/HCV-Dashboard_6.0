@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="630" viewBox="0 0 980 630"><style>
+text{font-family:Lato,Arial,sans-serif}
+.title{font-family:Montserrat,Arial,sans-serif;font-size:22px;font-weight:700;fill:#1f2a3d}
+.subtitle{font-size:13px;fill:#687386}
+.caption{font-size:11px;fill:#687386}
+.axis{font-size:12px;fill:#687386}
+.label{font-size:13px;fill:#1f2a3d}
+.inbar-label{font-size:12px;font-weight:700;fill:#fff}
+.inbar-dark{font-size:12px;font-weight:700;fill:#1f2a3d}
+.small-label{font-size:12px;fill:#687386}
+.value{font-size:13px;font-weight:700;fill:#1f2a3d}
+.grid{stroke:#e8ecf2;stroke-width:1}
+.baseline{stroke:#4d596b;stroke-width:1.3}
+.hcv{fill:#b98678}
+.renter{fill:#77a9bf}
+.neg{fill:#b98678}
+.pos{fill:#d8b36c}
+</style><text x="0" y="28" class="title">Lower opportunity exposure</text><rect x="0" y="56" width="12" height="12" class="hcv"/><text x="20" y="67" class="axis">HCV households</text><rect x="150" y="56" width="12" height="12" class="renter"/><text x="170" y="67" class="axis">All renters</text><line x1="0" y1="110" x2="0" y2="536" class="grid"/><text x="0" y="562" class="axis" text-anchor="middle">0</text><line x1="375" y1="110" x2="375" y2="536" class="grid"/><text x="375" y="562" class="axis" text-anchor="middle">25</text><line x1="750" y1="110" x2="750" y2="536" class="grid"/><text x="750" y="562" class="axis" text-anchor="middle">50</text><text x="900" y="562" class="axis" text-anchor="end">COI score</text><text x="0" y="108" class="label">Overall COI</text><rect x="0" y="128" width="545.0943399669724" height="28" class="hcv"/><rect x="0" y="168" width="724.1038111878406" height="28" class="renter"/><text x="12" y="147" class="inbar-label">HCV</text><text x="12" y="187" class="inbar-label">Renters</text><text x="535.0943399669724" y="122" class="value" text-anchor="end">36.3</text><text x="714.1038111878406" y="162" class="value" text-anchor="end">48.3</text><line x1="0" y1="210" x2="900" y2="210" class="grid"/><text x="0" y="220" class="label">Education</text><rect x="0" y="240" width="569.7326254931946" height="28" class="hcv"/><rect x="0" y="280" width="745.6008600365972" height="28" class="renter"/><text x="12" y="259" class="inbar-label">HCV</text><text x="12" y="299" class="inbar-label">Renters</text><text x="559.7326254931946" y="234" class="value" text-anchor="end">38.0</text><text x="735.6008600365972" y="274" class="value" text-anchor="end">49.7</text><line x1="0" y1="322" x2="900" y2="322" class="grid"/><text x="0" y="332" class="label">Health &amp; Env.</text><rect x="0" y="352" width="817.1918018213848" height="28" class="hcv"/><rect x="0" y="392" width="820.7057031344447" height="28" class="renter"/><text x="12" y="371" class="inbar-label">HCV</text><text x="12" y="411" class="inbar-label">Renters</text><text x="807.1918018213848" y="346" class="value" text-anchor="end">54.5</text><text x="810.7057031344447" y="386" class="value" text-anchor="end">54.7</text><line x1="0" y1="434" x2="900" y2="434" class="grid"/><text x="0" y="444" class="label">Social &amp; Econ.</text><rect x="0" y="464" width="508.3323170063754" height="28" class="hcv"/><rect x="0" y="504" width="695.4643801357174" height="28" class="renter"/><text x="12" y="483" class="inbar-label">HCV</text><text x="12" y="523" class="inbar-label">Renters</text><text x="498.3323170063754" y="458" class="value" text-anchor="end">33.9</text><text x="685.4643801357174" y="498" class="value" text-anchor="end">46.4</text><text x="0" y="608" class="caption">Source: COI 3.0 and HCV household distribution data.</text></svg>

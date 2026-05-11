@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Do Housing Choice Vouchers Deliver Real Housing Choice?</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- =========================
+       Top Navigation (single-page)
+  ========================== -->
+  <!-- Unified sticky nav bar -->
+  <header class="nav-bar">
+    <div class="nav-brand">
+      <img src="images/hip.png" alt="Platform Logo">
+      <span class="nav-title">Do Housing Choice Vouchers Deliver Real Housing Choice?</span>
+    </div>
+    <nav class="topnav">
+      <a href="#cover">Home</a>
+      <a href="#background">Platform</a>
+      <a href="#definitions">Definitions &amp; Methods</a>
+      <a href="#datasets">References</a>
+    </nav>
+  </header>
+
+  <!-- =========================
+       Main Paper Container
+  ========================== -->
+  <main>
+
+    <!-- ========================= IMMERSIVE COVER ========================= -->
+    <section id="cover" class="cover-hero" aria-labelledby="cover-title">
+      <div class="cover-content">
+        <p class="cover-kicker">Housing Choice Voucher Research Platform</p>
+        <h1 id="cover-title">Do Housing Choice Vouchers Deliver Real Housing Choice?</h1>
+        <p class="cover-sub">A national visual report tracing voucher assistance from unmet rental need, through local program performance, to neighborhood opportunity after lease-up.</p>
+        <a href="#landing" class="cover-enter" aria-label="Enter the report landing page">
+          <span>Enter Report</span>
+          <span aria-hidden="true">↓</span>
+        </a>
+      </div>
+
+      <div class="cover-rail" aria-label="Project story structure">
+        <span>Need</span>
+        <span>Administration</span>
+        <span>Opportunity</span>
+      </div>
+
+      <a href="#landing" class="cover-scroll" aria-label="Scroll to report">
+        <span></span>
+      </a>
+    </section>
+    <!-- ========================= END IMMERSIVE COVER ========================= -->
+
+    <!-- ========================= LANDING HERO ========================= -->
+    <section id="landing" class="landing-hero">
+
+      <div class="landing-left">
+
+        <p class="landing-meta">HCV Research Platform</p>
+        <div class="landing-headline">
+          <h1 class="landing-title">Do Housing Choice Vouchers Deliver Real Housing Choice?</h1>
+          <p class="landing-sub">A national visual report tracing voucher assistance from unmet rental need, through local program performance, to neighborhood opportunity after lease-up.</p>
+          <p class="landing-report-meta">May 2026 · Housing Initiative at Penn</p>
+        </div>
+
+        <p class="landing-abstract">The project follows the voucher process from need, to program administration, to post-lease-up opportunity. It asks where eligible renters remain underserved, where PHA performance differs across local systems, and whether voucher households are reaching neighborhoods with opportunity conditions comparable to renters overall.</p>
+
+        <div class="landing-tools" aria-label="Interactive tools">
+          <a href="dashboards/hcv/gap.html" target="_blank" rel="noopener" class="landing-tool-link">
+            <strong>Voucher Gap Ratio Interactive Map</strong>
+            <span>Open map</span>
+          </a>
+          <a href="dashboards/hcv/index.html" target="_blank" rel="noopener" class="landing-tool-link">
+            <strong>PHA Performance Interactive Map</strong>
+            <span>Open map</span>
+          </a>
+          <a href="dashboards/opportunity/index.html" target="_blank" rel="noopener" class="landing-tool-link">
+            <strong>Opportunity Gap Interactive Map</strong>
+            <span>Open map</span>
+          </a>
+          <a href="dashboards/hcv/metro_chart.html" target="_blank" rel="noopener" class="landing-tool-link">
+            <strong>Compare Voucher Gap Ratios Across Cities</strong>
+            <span>View charts</span>
+          </a>
+          <a href="dashboards/hcv/pha_charts.html" target="_blank" rel="noopener" class="landing-tool-link">
+            <strong>Compare PHA Performances</strong>
+            <span>View charts</span>
+          </a>
+        </div>
+      </div>
+
+    </section>
+    <!-- ========================= END LANDING HERO ========================= -->
+
+    <aside class="page-toc" aria-labelledby="toc-title">
+      <p class="page-toc-kicker">Contents</p>
+      <h2 id="toc-title">Table of Contents</h2>
+      <ol>
+        <li><a href="#background">Platform Overview</a></li>
+        <li><a href="#voucher-gap">Voucher Gap Ratio</a></li>
+        <li><a href="#explore-map">PHA Level Performance Metrics</a></li>
+
+        <li><a href="#definitions">Definitions &amp; Methods</a></li>
+        <li><a href="#datasets">Datasets &amp; References</a></li>
+      </ol>
+    </aside>
+
+    <div class="container">
+
+      <section id="background" class="section intro-copy" aria-labelledby="intro-title">
+        <h2 id="intro-title" class="section-title platform-title">The Core Question: Does Assistance Become Real Choice?</h2>
+        <p>The Housing Choice Voucher (HCV) program is built on a powerful promise: instead of limiting low-income households to a fixed public housing unit, it should help them rent in the private market and exercise meaningful choice over where they live. But that promise depends on more than the formal existence of a subsidy. It depends on whether assistance is available, whether local agencies and markets allow vouchers to turn into leases, and whether lease-up expands access to neighborhoods with real opportunity.</p>
+        <p>This project starts from that gap between policy design and lived access. A voucher can reduce rent burden, but it can also be blocked by scarcity, waiting lists, landlord refusal, payment standards, search deadlines, administrative friction, and unequal neighborhood markets. The central question is therefore not simply how many vouchers exist, but whether the voucher system actually moves households from unmet need toward stable housing and broader spatial choice.</p>
+
+        <h3 class="section-title platform-secondary-title">What This Platform Does</h3>
+        <p>This project assembles a national, multi-scale dataset to examine where the Housing Choice Voucher system succeeds, where it falls short, and where its promise of choice becomes constrained by local housing markets. Rather than treating vouchers as a single program output, the platform connects assistance need, PHA administration, lease-up conditions, and neighborhood opportunity across national, state, county, census tract, ZIP code, and PHA geographies where available.</p>
+        <p>The platform is designed as both a data summary and a critical research tool. It asks not only how many vouchers are in use, but whether assistance reaches eligible renters, whether local systems can convert vouchers into actual leases, and whether successful lease-up gives households access to neighborhoods comparable to the broader renter market. This matters because high aggregate program performance can coexist with deep unmet need, uneven local capacity, and unequal spatial outcomes.</p>
+
+        <div class="research-platform-callout">
+          <h3 class="research-platform-title">A National Interactive Data Platform</h3>
+          <div class="research-platform-copy">
+            <p>This first interactive tool functions as the project's general data platform. It brings together HCV indicators and neighborhood context variables in a shared spatial interface so researchers can move from broad national patterns to specific local conditions.</p>
+            <p>Rather than presenting one fixed finding, the platform supports exploration: users can examine voucher households, subsidized housing patterns, renter demographics, poverty, rent burden, local housing conditions, and related neighborhood context across multiple geographies. This provides the empirical foundation for the more focused analytical modules that follow.</p>
+            <p>The platform is accompanied by two documentation files: a methodology document that explains how the tool's indicators were constructed and recalculated, and a data dictionary that defines the variables used in the interactive map.</p>
+            <p class="map-link-note">Due to file size limitations, this interactive data platform is not currently deployed through GitHub.</p>
+          </div>
+          <a href="#" class="map-link-box" aria-label="Open interactive data platform preview">
+            <img src="images/interactive.png" alt="Interactive data platform preview">
+            <div class="map-link-copy">
+              <strong>Open Interactive Data Platform</strong>
+            </div>
+          </a>
+        </div>
+
+        <h3 class="research-transition-title">A Research Framework for Real Housing Choice</h3>
+        <p>The interactive platform provides the broader empirical base; the rest of the report turns that base into three linked tests of whether voucher assistance becomes real housing choice. The framework treats the voucher not as a single benefit, but as a pathway shaped by scarcity, administration, landlord participation, payment standards, search time, and neighborhood opportunity.</p>
+        <ol>
+          <li><strong>Unmet assistance need:</strong> the Voucher Gap Ratio asks where eligible renters remain underserved, and how the geography of shortage changes when need is viewed through renter, child, poverty, elderly, and racial equity lenses.</li>
+          <li><strong>Administrative conversion:</strong> the PHA Level Performance Metrics ask whether local systems can convert available assistance into actual leases, and where high aggregate utilization may still mask issued-but-not-leased vouchers, fiscal constraints, portability effects, or local market bottlenecks.</li>
+          <li><strong>Post-lease-up opportunity:</strong> the Opportunity Gap asks whether households who successfully lease up are reaching neighborhoods comparable to the broader renter market, or whether voucher use remains spatially constrained after the formal search process ends.</li>
+        </ol>
+
+        <figure class="pathway-figure" aria-labelledby="pathway-figure-title">
+          <h4 id="pathway-figure-title">Voucher Access Pathway and Research Modules</h4>
+          <div class="pathway-drawing-wrap">
+            <svg class="pathway-drawing" viewBox="0 0 980 330" role="img" aria-labelledby="pathway-svg-title pathway-svg-desc">
+              <title id="pathway-svg-title">Voucher access pathway and research modules</title>
+              <desc id="pathway-svg-desc">A five-stage voucher user pathway showing how the Voucher Gap Ratio, PHA Level Performance Metrics, and Opportunity Gap modules correspond to different stages of access.</desc>
+              <g class="pathway-stage-cards">
+                <rect class="pathway-stage-card pathway-stage-card-1" x="0" y="44" width="145" height="160" rx="10"></rect>
+                <rect class="pathway-stage-card pathway-stage-card-2" x="205" y="44" width="145" height="160" rx="10"></rect>
+                <rect class="pathway-stage-card pathway-stage-card-3" x="410" y="44" width="145" height="160" rx="10"></rect>
+                <rect class="pathway-stage-card pathway-stage-card-4" x="615" y="44" width="145" height="160" rx="10"></rect>
+                <rect class="pathway-stage-card pathway-stage-card-5" x="820" y="44" width="145" height="160" rx="10"></rect>
+              </g>
+
+              <g class="pathway-flow">
+                <path class="pathway-arrow-shape pathway-arrow-gray" d="M168 116 H184 V110 L198 124 L184 138 V132 H168 Z"></path>
+                <path class="pathway-arrow-shape pathway-arrow-orange" d="M373 116 H389 V110 L403 124 L389 138 V132 H373 Z"></path>
+                <path class="pathway-arrow-shape pathway-arrow-orange" d="M578 116 H594 V110 L608 124 L594 138 V132 H578 Z"></path>
+                <path class="pathway-arrow-shape pathway-arrow-red" d="M783 116 H799 V110 L813 124 L799 138 V132 H783 Z"></path>
+              </g>
+
+              <g class="pathway-stage-node pathway-stage-1" transform="translate(16 0)">
+                <text class="pathway-svg-number" x="0" y="84">01</text>
+                <g class="pathway-svg-icon" transform="translate(54 60)">
+                  <path d="M0 34 L18 2 L36 34 Z"></path>
+                  <path d="M18 13 L18 24"></path>
+                  <path d="M18 29 L18 30"></path>
+                </g>
+                <text class="pathway-svg-stage-title" x="0" y="128">Limited access</text>
+                <text class="pathway-svg-body" x="0" y="150">
+                  <tspan x="0" dy="0">Limited supply, waiting</tspan>
+                  <tspan x="0" dy="19">lists, lotteries, delays</tspan>
+                </text>
+              </g>
+
+              <g class="pathway-stage-node pathway-stage-2" transform="translate(221 0)">
+                <text class="pathway-svg-number" x="0" y="84">02</text>
+                <g class="pathway-svg-icon" transform="translate(54 58)">
+                  <path d="M18 2 A18 18 0 1 1 17.9 2"></path>
+                  <path d="M18 10 L18 20 L26 25"></path>
+                  <path d="M12 0 L24 0"></path>
+                </g>
+                <text class="pathway-svg-stage-title" x="0" y="128">Timed search</text>
+                <text class="pathway-svg-body" x="0" y="150">
+                  <tspan x="0" dy="0">Countdown begins under</tspan>
+                  <tspan x="0" dy="19">program constraints</tspan>
+                </text>
+              </g>
+
+              <g class="pathway-stage-node pathway-stage-3" transform="translate(426 0)">
+                <text class="pathway-svg-number" x="0" y="84">03</text>
+                <g class="pathway-svg-icon" transform="translate(54 60)">
+                  <path d="M2 35 L2 14 L18 4 L34 14 L34 35"></path>
+                  <path d="M11 35 L11 22 L25 22 L25 35"></path>
+                  <path d="M0 5 L36 36"></path>
+                </g>
+                <text class="pathway-svg-stage-title" x="0" y="128">Market barriers</text>
+                <text class="pathway-svg-body" x="0" y="150">
+                  <tspan x="0" dy="0">Landlord refusal, rent</tspan>
+                  <tspan x="0" dy="19">limits, weak information</tspan>
+                </text>
+              </g>
+
+              <g class="pathway-stage-node pathway-stage-4" transform="translate(631 0)">
+                <text class="pathway-svg-number" x="0" y="84">04</text>
+                <g class="pathway-svg-icon" transform="translate(58 58)">
+                  <path d="M4 2 L28 2 L28 38 L4 38 Z"></path>
+                  <path d="M10 12 L22 12"></path>
+                  <path d="M10 20 L22 20"></path>
+                  <path d="M9 31 L14 35 L23 26"></path>
+                </g>
+                <text class="pathway-svg-stage-title" x="0" y="128">Lease-up friction</text>
+                <text class="pathway-svg-body" x="0" y="150">
+                  <tspan x="0" dy="0">Inspections, payment</tspan>
+                  <tspan x="0" dy="19">standards, timing</tspan>
+                </text>
+              </g>
+
+              <g class="pathway-stage-node pathway-stage-5" transform="translate(836 0)">
+                <text class="pathway-svg-number" x="0" y="84">05</text>
+                <g class="pathway-svg-icon" transform="translate(56 56)">
+                  <path d="M18 2 C8 2 2 9 2 18 C2 31 18 42 18 42 C18 42 34 31 34 18 C34 9 28 2 18 2 Z"></path>
+                  <path d="M12 18 A6 6 0 1 1 24 18 A6 6 0 1 1 12 18"></path>
+                  <path d="M4 43 L32 43"></path>
+                </g>
+                <text class="pathway-svg-stage-title" x="0" y="128">Spatial outcome</text>
+                <text class="pathway-svg-body" x="0" y="150">
+                  <tspan x="0" dy="0">Final location shapes</tspan>
+                  <tspan x="0" dy="19">neighborhood access</tspan>
+                </text>
+              </g>
+
+              <g class="pathway-modules">
+                <rect class="pathway-module-shape pathway-module-card-1" x="0" y="232" width="145" height="62" rx="8"></rect>
+                <rect class="pathway-module-shape pathway-module-card-2" x="205" y="232" width="555" height="62" rx="8"></rect>
+                <rect class="pathway-module-shape pathway-module-card-5" x="820" y="232" width="145" height="62" rx="8"></rect>
+
+                <text class="pathway-module-label pathway-module-label-centered" x="72.5" y="257">Voucher Gap Ratio</text>
+                <text class="pathway-module-question pathway-module-question-centered" x="72.5" y="278">Who remains underserved?</text>
+
+                <text class="pathway-module-label pathway-module-label-centered" x="482.5" y="257">PHA Level Performance Metrics</text>
+                <text class="pathway-module-question pathway-module-question-centered" x="482.5" y="278">Which systems turn assistance into leases?</text>
+
+                <text class="pathway-module-label pathway-module-label-centered" x="892.5" y="257">Opportunity Gap</text>
+                <text class="pathway-module-question pathway-module-question-centered" x="892.5" y="278">Expand choice?</text>
+              </g>
+            </svg>
+          </div>
+        </figure>
+
+        <h3 class="section-title">Why Start from the User Perspective</h3>
+        <p>Existing research shows that the strongest barriers often appear between formal eligibility and actual housing outcomes. Voucher holders may face closed waiting lists before assistance is available, search pressure after issuance, landlord refusal during the housing search, administrative delays before lease approval, and unequal neighborhood access even after move-in. Starting from the user perspective makes these hidden frictions visible.</p>
+        <p>This matters because standard program measures can make the system look more complete than it feels to households trying to use it. A voucher may be funded but unavailable, issued but unused, leased but geographically constrained, or counted as a success while still leaving a family in a low-opportunity environment. Following the user pathway helps connect program performance to lived access.</p>
+        <ol>
+          <li><strong>Before entry:</strong> limited supply, closed waiting lists, lotteries, and long delays determine who ever receives assistance.</li>
+          <li><strong>After issuance:</strong> the voucher creates a time-limited search process in which households must find an eligible unit, landlord, rent level, and inspection timeline that all align.</li>
+          <li><strong>During the search:</strong> landlord refusal, source-of-income discrimination, limited listings, weak information, and payment standards can narrow the geography of realistic choice.</li>
+          <li><strong>At lease-up:</strong> administrative approvals, inspections, portability rules, and market rents can determine whether an apparently viable unit becomes an actual subsidized lease.</li>
+          <li><strong>After move-in:</strong> the location of the leased unit shapes whether the voucher delivers only rent relief or also access to safer, better-resourced, and more opportunity-rich neighborhoods.</li>
+        </ol>
+        <p><strong>In short:</strong> this report evaluates HCV not only as a subsidy program, but as a chain of access. Each module asks where that chain breaks: before assistance reaches eligible renters, during local program administration, or after lease-up when the geography of opportunity is finally revealed.</p>
+
+      </section>
+
+
+<!-- ========================= -->
+      <!-- Voucher Gap Ratio -->
+      <section id="voucher-gap" class="section">
+        <h2 class="section-title">Voucher Gap Ratio</h2>
+        <p class="lead">This module maps where eligible renters face the largest mismatch between housing need, voucher supply, and access to assistance — at the state, county, and census tract level.</p>
+
+        <div class="opportunity-map-callout">
+          <a href="dashboards/hcv/gap.html" target="_blank" rel="noopener" class="map-link-box opportunity-map-link" aria-label="Open Voucher Gap Ratio Interactive Map">
+            <img src="images/VGR.PNG" alt="Voucher Gap Ratio Interactive Map preview">
+            <div class="map-link-copy">
+              <strong>Open Voucher Gap Ratio Map</strong>
+            </div>
+          </a>
+          <div class="opportunity-map-copy">
+            <h4>What the Voucher Gap Ratio Reveals</h4>
+            <p>At the state level, when the voucher gap ratio is weighted by renters, the pattern shows that the gap is consistently high across most of the country, with particularly strong concentrations in the South, Southwest, and parts of the Midwest. States like Texas, Florida, Arizona, and many in the Southeast appear darker, indicating that a large share of renter households are not covered by vouchers. While some Northeastern and Upper Midwest states show slightly lower values, the overall pattern suggests that the shortage is widespread and affects large renter populations rather than being confined to a few regions.</p>
+            <p style="margin-top:16px;">At the county level, the pattern becomes much more detailed and uneven. Instead of broad regional trends, there are clusters of very high voucher gaps within states, especially in urban and peri-urban counties, areas with high renter concentrations, and much of the Southern and Sunbelt regions. At the same time, there are scattered pockets of lower gaps, which are often associated with smaller populations, lower renter shares, or places where data is suppressed or missing.</p>
+            <h4 style="margin-top:24px;">Weighting by poverty highlights that the voucher gap is most severe and most widespread among the lowest-income households</h4>
+            <p style="margin-top:12px;">When the voucher gap is weighted by households under the poverty level, the map shows an even more uniformly high gap across almost all states. Most states appear in darker shades, indicating that a very large share of low-income households are not being reached by vouchers. Compared to renter-weighted patterns, the variation across states becomes smaller, suggesting that voucher shortages are consistently severe for the poorest households nationwide, not just in specific regions. At the county level, the map reveals a widespread and dense concentration of high gaps, with most counties showing very high values. The pattern is less about distinct regional clusters and more about near-universal shortfall, especially across the South, Midwest, and large parts of the West. While there are a few scattered counties with lower values, they are limited and do not form strong geographic patterns.</p>
+            <h4 style="margin-top:24px;">Maps reveal Higher Voucher Gaps for Households of Color</h4>
+            <p style="margin-top:12px;">When the voucher gap is weighted by households of color, the map shows a consistently high gap across most states, but with clearer concentration in the South, Southwest, and parts of the Midwest. States like Texas, Arizona, Nevada, and much of the Southeast appear darker, indicating that households of color face particularly large shortfalls in voucher coverage. Compared to other weightings, this pattern more clearly reflects structural disparities, where regions with larger populations of households of color also experience deeper unmet need. At the county level, the pattern becomes highly concentrated and clustered, especially in the South and in urban areas across the country. Many counties show very high gap values, with dense clusters in areas that have both high shares of households of color and high renter vulnerability. While there are some scattered counties with lower values, the dominant pattern is one of widespread and concentrated disadvantage, rather than evenly distributed gaps.</p>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- PHA Level Performance Metrics -->
+      <section id="explore-map" class="section">
+        <h2 class="section-title">PHA Level Performance Metrics</h2>
+        <p class="lead">This national interactive map links PHA-level HCV administrative indicators with the broader geography of housing need and local conditions, offering a first view of where formal assistance translates into real lease-up capacity.</p>
+
+        <!-- HCV Performance Dashboard -->
+        <section id="hcv-dashboard" class="subsection">
+          <div class="opportunity-map-callout" style="margin-top:40px;">
+            <a href="dashboards/hcv/index.html" target="_blank" rel="noopener" class="map-link-box opportunity-map-link" aria-label="Open PHA Performance Interactive Map">
+              <img src="images/PHA.PNG" alt="PHA Performance Interactive Map preview">
+              <div class="map-link-copy">
+                <strong>Open PHA Performance Map</strong>
+              </div>
+            </a>
+            <div class="opportunity-map-copy">
+              <h4>What the PHA Performance Pattern Reveals</h4>
+              <p>At the PHA level, the performance patterns reveal a system that is broadly operating at or near full capacity, but with significant underlying heterogeneity and structural inefficiencies. Median utilization rates hover at approximately 100%, with even the lower quartile above 99%, indicating that most housing authorities are successfully leasing nearly all available vouchers. This is reinforced by high success rates (median ≈ 97%), suggesting that once vouchers are issued, they are highly likely to be converted into active leases. However, the presence of utilization rates exceeding 100% and extreme maximum values signals measurement inconsistencies, likely driven by portability dynamics or reporting discrepancies, rather than true over-utilization.</p>
+              <p style="margin-top:16px;">At the same time, the distribution of issued-but-not-leased vouchers (mean ≈ 133, with a long right tail) highlights persistent frictions in voucher absorption for a subset of PHAs, pointing to localized market constraints such as landlord participation or housing availability. Financial indicators further underscore disparities: while median reserve balances are substantial (~$140K), the wide range up to over $1.3 million suggests uneven fiscal capacity across agencies. Similarly, cost per voucher varies dramatically, with a heavy right tail, indicating that some PHAs operate in significantly higher-cost environments or face inefficiencies in program delivery.</p>
+              <p style="margin-top:16px;">Portability plays a relatively minor role for most PHAs (median port-in rate = 0), but the existence of high outliers implies that certain jurisdictions function as net receivers in regional housing markets, potentially inflating their apparent utilization. Overall, the data suggests a system that is efficient on average but uneven in practice, where high aggregate performance masks localized bottlenecks, fiscal disparities, and measurement distortions driven by inter-jurisdictional dynamics.</p>
+            </div>
+          </div>
+
+        </section>
+
+        <div class="indicator-defs" style="margin-top:32px;">
+          <table class="indicator-table">
+            <thead>
+              <tr>
+                <th>Indicator</th>
+                <th>Definition</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Effective Under Lease</td>
+                <td>The number of vouchers a PHA is actively using to house families within its own jurisdiction — total vouchers under lease minus port-in vouchers administered on behalf of other PHAs.</td>
+              </tr>
+              <tr>
+                <td>Utilization Rate</td>
+                <td>The share of a housing authority's authorized voucher budget that is currently leased up — measures how much of available voucher capacity is being actively used.</td>
+              </tr>
+              <tr>
+                <td>Success Rate</td>
+                <td>The percent of vouchers issued to families in a year that result in an actual lease and assistance contract with a landlord — measures the ability of individual recipients to successfully use their vouchers.</td>
+              </tr>
+              <tr>
+                <td>Cost Per Voucher</td>
+                <td>The average Housing Assistance Payment (HAP) a PHA spends to keep one voucher actively leased within its own jurisdiction — total HAP expenditure divided by effective under lease.</td>
+              </tr>
+              <tr>
+                <td>Port-In Rate</td>
+                <td>The share of a PHA's total active leases that are vouchers originating from another PHA — families who were issued a voucher elsewhere and chose to move into this PHA's jurisdiction.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </section>
+
+
+      <!-- Opportunity Gap -->
+      <section id="opportunity-gap" class="section">
+        <h2 class="section-title">Opportunity Gap</h2>
+        <div class="opportunity-opening-copy">
+          <p>The PHA performance metrics show whether local agencies can convert voucher assistance into actual leases. But a lease is still an intermediate outcome, not the full promise of housing choice. Even after a household has waited for assistance, received a voucher, searched under time pressure, found a qualifying unit, passed program requirements, and finally moved in, a new question remains: did the voucher open access to a neighborhood with stronger opportunity conditions, or did the household simply reach the first place where the program could be made to work? This section therefore moves from administrative conversion to spatial outcome, asking whether successful lease-up also means meaningful access to opportunity.</p>
+        </div>
+
+        <div class="opportunity-map-callout">
+          <a href="dashboards/opportunity/index.html" target="_blank" rel="noopener" class="map-link-box opportunity-map-link" aria-label="Open Opportunity Gap interactive map">
+            <img src="images/opportunity.png" alt="Opportunity Gap interactive map preview">
+            <div class="map-link-copy">
+              <strong>Open Opportunity Map</strong>
+            </div>
+          </a>
+          <div class="opportunity-map-copy">
+            <h4>Opportunity Matters After Lease-Up</h4>
+            <p>This module uses the Child Opportunity Index (COI) as a central measure of whether housing assistance translates into access to opportunity. COI is a composite measure of neighborhood conditions and resources linked to children's healthy development, bringing together 44 neighborhood-level indicators across education, health and environment, and social and economic opportunity. The Opportunity Gap map compares metropolitan statistical area-level opportunity exposure for HCV households with the broader renter population, showing where voucher households are concentrated in lower-opportunity or higher-opportunity neighborhoods relative to renters overall. Read this way, the question becomes sharper: not simply whether HCV helps families lease a unit, but whether the program helps them reach neighborhoods with meaningfully stronger opportunity structures.</p>
+            <p>Research on voucher mobility and landlord participation suggests that neighborhood outcomes are shaped by far more than household preference alone. Search constraints, landlord gatekeeping, time pressure, payment standards, administrative friction, and local rental supply all narrow where voucher holders can realistically succeed. For that reason, unequal opportunity outcomes should not be treated as an incidental consequence after lease-up; they are one of the clearest tests of whether the promise of "choice" has actually been fulfilled.</p>
+          </div>
+        </div>
+
+        <section id="opportunity-dashboard" class="subsection">
+          <div class="opportunity-copy-block">
+            <h4>National Pattern: Lease-Up Does Not Equal Equal Opportunity</h4>
+            <p>The national comparison shows a clear gap between where voucher households live and where renters overall live. Across metropolitan areas, the HCV-weighted overall Child Opportunity Index score is 36.3, compared with a renter-weighted benchmark of 48.3. In other words, successful lease-up does not necessarily mean access to comparable neighborhood opportunity.</p>
+            <p style="margin-top:20px;">This finding should be read as descriptive rather than causal. The chart does not prove that vouchers cause lower-opportunity placements, but it does show that the observed geography of voucher use is associated with systematically lower opportunity exposure. That distinction matters: the issue is not simply whether households use assistance, but where that assistance can realistically be used.</p>
+          </div>
+
+          <div class="opportunity-copy-block">
+            <h4>Where the Gap Becomes Visible</h4>
+            <p>The metro-level extremes make the national pattern more concrete. In places such as Kankakee, Niles, Canton-Massillon, St. Louis, and Detroit, voucher households are positioned far below the local renter benchmark. These gaps suggest that local housing markets may be narrowing the geography of voucher use in ways that are not visible from lease-up rates alone.</p>
+            <p style="margin-top:20px;">The positive exceptions are just as important. Metro areas such as Flagstaff, Manhattan, Grand Island, Gettysburg, and Farmington show HCV-weighted opportunity exposure at or above the renter benchmark. These cases suggest that lower-opportunity placement is not inevitable. Local conditions, including landlord participation, payment standards, mobility supports, and administrative practices, may shape whether vouchers function only as affordability assistance or also as tools for expanding spatial access.</p>
+          </div>
+
+          <div class="analysis-figure-pair">
+            <figure class="analysis-figure">
+              <div class="figure-bar">
+                <span>Figure 1</span>
+                <a href="images/opportunity-analysis/national_coi_exposure.svg" download>Download SVG</a>
+              </div>
+              <img src="images/opportunity-analysis/national_coi_exposure.svg" alt="National COI exposure comparison between HCV households and renters">
+            </figure>
+            <figure class="analysis-figure">
+              <div class="figure-bar">
+                <span>Figure 2</span>
+                <a href="images/opportunity-analysis/metro_gap_extremes.svg" download>Download SVG</a>
+              </div>
+              <img src="images/opportunity-analysis/metro_gap_extremes.svg" alt="Metro areas with the largest negative and positive opportunity gaps">
+            </figure>
+          </div>
+
+          <div class="opportunity-copy-block">
+            <h4>A Structural Pattern, Not a Few Outliers</h4>
+            <p>The scatter plot reinforces the broader pattern. Each point represents a metropolitan area, comparing renter-weighted COI exposure with HCV-weighted COI exposure. Most points fall below the equality line, meaning voucher households are exposed to lower-opportunity neighborhoods than renters overall in most metropolitan areas.</p>
+            <p style="margin-top:20px;">This does not identify the exact mechanism behind each metro's gap. It cannot separate the effects of landlord refusal, search constraints, payment standards, administrative burden, or rental supply. But it does show that the opportunity gap is widespread enough to be treated as a core dimension of HCV performance, not a side issue.</p>
+          </div>
+
+          <figure class="analysis-figure">
+            <div class="figure-bar">
+              <span>Figure 3</span>
+              <a href="images/opportunity-analysis/hcv_vs_renter_scatter.svg" download>Download SVG</a>
+            </div>
+            <img src="images/opportunity-analysis/hcv_vs_renter_scatter.svg" alt="Scatter plot comparing HCV-weighted and renter-weighted COI exposure across metro areas">
+          </figure>
+
+          <div class="opportunity-copy-block">
+            <h4>What the Metropolitan Pattern Reveals</h4>
+            <p>Read together, these figures suggest that the Housing Choice Voucher program often succeeds at subsidizing rent without fully delivering spatial choice. Housing assistance still matters for affordability and stability, but affordability and opportunity are not the same outcome.</p>
+            <p style="margin-top:20px;">The positive metro exceptions show that broader spatial access is possible. The dominant pattern, however, suggests that many local voucher systems still need stronger landlord engagement, better search support, more flexible payment standards, source-of-income protections, and mobility-oriented program design.</p>
+            <p style="margin-top:20px;">In short, the opportunity gap reframes HCV performance after lease-up. It asks whether the program is only helping families rent somewhere, or whether it is helping them rent in places that expand access to opportunity. The evidence suggests that, across much of the country, the answer remains incomplete.</p>
+          </div>
+
+          <div class="indicator-defs">
+            <h4>Opportunity Metric Guide</h4>
+            <table class="indicator-table">
+              <thead>
+                <tr>
+                  <th>Indicator</th>
+                  <th>Definition</th>
+                  <th>Interpretation</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Overall Opportunity Gap</td>
+                  <td>Difference between the metropolitan statistical area-level HCV-weighted Child Opportunity Index and the renter-weighted Child Opportunity Index (hcv_coi_idx - renter_coi_idx).</td>
+                  <td>Negative values mean HCV households are located in lower-opportunity neighborhoods than renters overall; positive values mean the reverse.</td>
+                </tr>
+                <tr>
+                  <td>Education Opportunity Gap</td>
+                  <td>Difference between HCV-weighted and renter-weighted education domain scores (hcv_coi_edu - renter_coi_edu).</td>
+                  <td>More negative values indicate voucher households are more concentrated in neighborhoods with weaker education opportunity.</td>
+                </tr>
+                <tr>
+                  <td>Health &amp; Environment Gap</td>
+                  <td>Difference between HCV-weighted and renter-weighted health and environment domain scores (hcv_coi_health_env - renter_coi_health_env).</td>
+                  <td>More negative values indicate voucher households are more concentrated in neighborhoods with weaker health and environmental opportunity.</td>
+                </tr>
+                <tr>
+                  <td>Social &amp; Economic Gap</td>
+                  <td>Difference between HCV-weighted and renter-weighted social and economic domain scores (hcv_coi_eco - renter_coi_eco).</td>
+                  <td>More negative values indicate voucher households are more concentrated in neighborhoods with weaker social and economic opportunity.</td>
+                </tr>
+                <tr>
+                  <td>HCV-Weighted Opportunity Score</td>
+                  <td>Metropolitan statistical area-average neighborhood opportunity exposure for HCV households, calculated by weighting tract opportunity scores by HCV household counts.</td>
+                  <td>Higher values mean voucher households are, on average, located in higher-opportunity tracts within that metropolitan area.</td>
+                </tr>
+                <tr>
+                  <td>Renter-Weighted Opportunity Score</td>
+                  <td>Metropolitan statistical area-average neighborhood opportunity exposure for renter households overall, calculated by weighting tract opportunity scores by renter counts.</td>
+                  <td>This serves as the benchmark for understanding whether voucher households are reaching neighborhoods comparable to the broader renter market.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+
+
+
+
+      <!-- Definitions & Methods -->
+      <section id="definitions" class="section">
+        <h2>Definitions &amp; Methods</h2>
+        <p>This section documents how each module translates the broader research question into measurable indicators. The Opportunity Gap method is completed here; the Voucher Gap Ratio and PHA Performance methods are left as structured placeholders for the relevant module owners.</p>
+
+        <div class="indicator-defs" style="margin-top:16px;">
+          <table class="indicator-table">
+            <thead>
+              <tr>
+                <th>Module</th>
+                <th>Method</th>
+                <th>Interpretation and Caveats</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Voucher Gap Ratio</td>
+                <td>
+                  The gap ratio is computed as 1 minus the ratio of total vouchers in use to the eligible renter universe at a given AMI threshold (&lt;30%, &lt;50%, &lt;80%). Renter counts at each threshold are cumulative sums from CHAS data. Total vouchers come from HUD Picture of Subsidized Households.<br><br>
+                  For the poverty lens, vouchers attributed to poverty households are estimated by applying the share of voucher holders below the poverty line (from HUD Picture) to total units, then compared against the ACS poverty household universe.<br><br>
+                  For the race lens, vouchers attributed to Black non-Hispanic and Hispanic households are estimated using racial composition shares from HUD Picture, then compared against the corresponding CHAS renter universe at each AMI threshold.<br><br>
+                  Metro-level ratios are derived by first reconstructing absolute unit counts from county-level ratios, then re-computing the ratio from aggregated counts — avoiding the averaging-of-ratios fallacy.
+                </td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>PHA Level Performance Metrics</td>
+                <td>
+                  Variables from HUD Voucher Management System (VMS) and Picture of Subsidized Households were assembled into a panel dataset in R. Outliers were identified using interquartile range and removed before computing the following metrics, which are exported as GeoJSON for mapping.<br><br>
+                  <strong>Effective Under Lease</strong> is the number of vouchers a PHA is actively using within its own jurisdiction — total vouchers under lease minus port-in vouchers administered on behalf of other PHAs.<br><br>
+                  <strong>Utilization Rate</strong> is the share of a PHA's authorized voucher budget that is currently leased up, calculated as effective under lease divided by total authorized vouchers.<br><br>
+                  <strong>Success Rate</strong> is the share of issued vouchers that result in an actual lease — under lease divided by the sum of under lease and issued-but-not-yet-leased vouchers.<br><br>
+                  <strong>Cost Per Voucher</strong> is total Housing Assistance Payment (HAP) expenditure divided by effective under lease, measuring the average HAP cost per voucher the PHA is genuinely responsible for. Using effective under lease (rather than raw under lease) prevents port-in vouchers from deflating the per-unit cost.<br><br>
+                  <strong>Port-In Rate</strong> is the share of a PHA's active leases that originated from another PHA's voucher holders who moved into its jurisdiction, calculated as port-in vouchers divided by total vouchers under lease.
+                </td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Opportunity Gap</td>
+                <td>
+                  The Opportunity Gap module measures whether successful voucher lease-up is associated with neighborhood opportunity exposure comparable to the broader renter population. The unit of analysis is the metropolitan statistical area. For each metro area, tract-level Child Opportunity Index scores are averaged twice: once using HCV household counts as weights, and once using renter household counts as weights.
+                  <div class="method-formula-stack" aria-label="Opportunity Gap formulas">
+                    <div class="method-formula">
+                      <div class="formula-name">HCV exposure</div>
+                      <div class="formula-expression">
+                        <span class="formula-lhs">HCV exposure</span>
+                        <span class="formula-equals">=</span>
+                        <span class="formula-fraction">
+                          <span class="formula-top">&Sigma;<sub>t</sub> HCV households<sub>t</sub> &times; COI score<sub>t</sub></span>
+                          <span class="formula-bottom">&Sigma;<sub>t</sub> HCV households<sub>t</sub></span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="method-formula">
+                      <div class="formula-name">Renter exposure</div>
+                      <div class="formula-expression">
+                        <span class="formula-lhs">Renter exposure</span>
+                        <span class="formula-equals">=</span>
+                        <span class="formula-fraction">
+                          <span class="formula-top">&Sigma;<sub>t</sub> renter households<sub>t</sub> &times; COI score<sub>t</sub></span>
+                          <span class="formula-bottom">&Sigma;<sub>t</sub> renter households<sub>t</sub></span>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="method-formula method-formula-gap">
+                      <div class="formula-name">Opportunity Gap</div>
+                      <div class="formula-expression">
+                        <span class="formula-lhs">Opportunity Gap</span>
+                        <span class="formula-equals">=</span>
+                        <span>HCV exposure - renter exposure</span>
+                      </div>
+                    </div>
+                  </div>
+                  The same calculation is repeated for the overall COI score and for the education, health and environment, and social and economic domains.
+                </td>
+                <td>
+                  Negative values indicate that HCV households are exposed to lower-opportunity neighborhoods than renters overall within the same metro area. Positive values indicate relatively higher HCV exposure. The measure should be read as a descriptive spatial outcome, not as proof of household preference or causal program impact. It captures where voucher households successfully lease up, but not unsuccessful searches, landlord refusals, search time, or units that fell through before lease-up.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </section>
+
+      <section id="datasets" class="section">
+        <h2>Datasets &amp; References</h2>
+
+        <div class="resource-downloads" aria-label="Platform documentation downloads">
+          <div class="resource-download">
+            <div class="resource-download-main">
+              <strong>Interactive Data Platform Methodology</strong>
+              <p>Download the methodology document for this interactive platform, including indicator construction, recalculated measures, and processing notes.</p>
+            </div>
+            <a class="resource-download-link" href="methodology/general%20platform/Recalculated_Indicator_Methodology.docx" download>Download DOCX</a>
+          </div>
+          <div class="resource-download">
+            <div class="resource-download-main">
+              <strong>Opportunity Gap Data Dictionary</strong>
+              <p>Download the spreadsheet dictionary for the variables, field names, and definitions used in the Opportunity Gap module of this interactive map tool.</p>
+            </div>
+            <a class="resource-download-link" href="methodology/general%20platform/dictionary.xlsx" download>Download XLSX</a>
+          </div>
+          <div class="resource-download">
+            <div class="resource-download-main">
+              <strong>Voucher Gap Ratio &amp; PHA Level Performance Metrics Data Dictionary</strong>
+              <p>Download the spreadsheet dictionary for the variables, field names, and definitions used in the Voucher Gap Ratio and PHA Level Performance Metrics modules.</p>
+            </div>
+            <a class="resource-download-link" href="methodology/general%20platform/Voucher_gap_PHA_data_dictionary.xlsx" download>Download XLSX</a>
+          </div>
+        </div>
+
+        <div class="indicator-defs" style="margin-top:16px;">
+          <table class="indicator-table">
+            <thead>
+              <tr>
+                <th>Module</th>
+                <th>Data Sources</th>
+                <th>Use in This Project</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Voucher Gap Ratio</td>
+                <td>
+                  <a href="https://www.huduser.gov/PORTAL/datasets/assthsg.html" target="_blank" rel="noopener">Picture of Subsidized Households (PSH)</a><br>
+                  <a href="https://www.huduser.gov/portal/datasets/cp.html" target="_blank" rel="noopener">Consolidated Planning / CHAS Data</a><br>
+                  ACS Data
+                </td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>PHA Level Performance Metrics</td>
+                <td>
+                  <a href="https://www.hud.gov/helping-americans/public-indian-housing-program-support-division" target="_blank" rel="noopener">HUD Voucher Management System Data</a><br>
+                  <a href="https://hudgis-hud.opendata.arcgis.com/datasets/HUD::estimated-housing-authority-service-areas-1/about" target="_blank" rel="noopener">Approximate PHA Level Jurisdiction / Service Boundaries</a>
+                </td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>Opportunity Gap</td>
+                <td>
+                  HUD Picture of Subsidized Households for HCV household locations; renter household counts from Census/ACS-derived tract data; Child Opportunity Index 3.0-2023 from diversitydatakids.org.
+                  <br><br>
+                  <a href="https://www.huduser.gov/portal/datasets/assthsg.html" target="_blank" rel="noopener">HUD Picture of Subsidized Households</a>
+                  <br>
+                  <a href="https://data.census.gov/" target="_blank" rel="noopener">U.S. Census Bureau ACS</a>
+                  <br>
+                  <a href="https://www.diversitydatakids.org/child-opportunity-index" target="_blank" rel="noopener">Child Opportunity Index</a>
+                </td>
+                <td>
+                  These sources are combined to estimate metropolitan opportunity exposure for HCV households and renters overall. The COI provides tract-level opportunity scores, while HCV and renter counts provide the population weights used to construct exposure measures. COI 3.0-2023 includes 44 indicators across education, health and environment, and social and economic domains.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <p class="muted">© <span id="yearNow"></span> Housing Equity Platform · Built for research use.</p>
+      </footer>
+
+    </div><!-- /.container -->
+
+  </main>
+
+  <script>
+    // Tiny UX: footer year.
+    document.getElementById("yearNow").textContent = new Date().getFullYear();
+
+    const coverHero = document.querySelector(".cover-hero");
+    if (coverHero) {
+      coverHero.addEventListener("pointermove", (event) => {
+        const rect = coverHero.getBoundingClientRect();
+        const x = (event.clientX - rect.left) / rect.width - 0.5;
+        const y = (event.clientY - rect.top) / rect.height - 0.5;
+        coverHero.style.setProperty("--mx", x.toFixed(3));
+        coverHero.style.setProperty("--my", y.toFixed(3));
+      });
+
+      coverHero.addEventListener("pointerleave", () => {
+        coverHero.style.setProperty("--mx", "0");
+        coverHero.style.setProperty("--my", "0");
+      });
+    }
+
+    const landingSection = document.getElementById("landing");
+    const footer = document.querySelector(".footer");
+    const updatePageToc = () => {
+      if (!landingSection || window.innerWidth < 1280) {
+        document.body.classList.remove("show-page-toc");
+        return;
+      }
+
+      const landingBottom = landingSection.offsetTop + landingSection.offsetHeight;
+      const footerTop = footer ? footer.getBoundingClientRect().top : Infinity;
+      const pastLanding = window.scrollY > landingBottom - 80;
+      const beforeFooter = footerTop > 220;
+      document.body.classList.toggle("show-page-toc", pastLanding && beforeFooter);
+    };
+
+    updatePageToc();
+    window.addEventListener("scroll", updatePageToc, { passive: true });
+    window.addEventListener("resize", updatePageToc);
+  </script>
+
+</body>
+
+</html>

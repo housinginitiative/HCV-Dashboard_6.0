@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Universal Voucher Gap · U.S. Metropolitan Areas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="gap.css" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #f5f6fa; color: #1a1d2e; font-family: 'Segoe UI', system-ui, sans-serif; min-height: 100vh; }
+
+    #header { display: flex; align-items: center; justify-content: space-between; padding: 14px 28px; background: #fff; border-bottom: 1px solid #e0e4f0; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+    #header h1 { font-size: 1.1rem; font-weight: 600; color: #1a1d2e; letter-spacing: .02em; }
+    #header p  { font-size: 0.78rem; color: #7a86a8; margin-top: 2px; }
+    #header-right a { font-size: 0.8rem; color: #3a5ec8; text-decoration: none; border: 1px solid #d0d5e8; padding: 5px 12px; border-radius: 4px; }
+    #header-right a:hover { background: #f0f3ff; border-color: #3a5ec8; }
+
+    #main { max-width: 1400px; margin: 36px auto; padding: 0 24px; }
+    #chart-header { margin-bottom: 28px; }
+    #chart-title { font-size: 1.05rem; font-weight: 700; color: #1a1d2e; text-transform: uppercase; letter-spacing: .06em; line-height: 1.35; max-width: 640px; }
+    #chart-subtitle { font-size: 0.78rem; color: #5a637a; margin-top: 6px; max-width: 700px; line-height: 1.5; }
+
+    #ami-row { display: flex; align-items: center; gap: 10px; margin-top: 16px; }
+    .ami-label { font-size: 0.7rem; font-weight: 600; letter-spacing: .08em; color: #7a86a8; }
+    .tog-btn { background: #f0f1f7; border: 1px solid #d0d5e8; color: #5a637a; padding: 5px 14px; border-radius: 4px; font-size: 0.78rem; cursor: pointer; transition: all .15s; }
+    .tog-btn:hover  { background: #e8ebf8; color: #1a1d2e; }
+    .tog-btn.active { background: #3a5ec8; border-color: #3a5ec8; color: #fff; font-weight: 600; }
+
+    #chart-card { background: #fff; border: 1px solid #e0e4f0; border-radius: 8px; padding: 20px 12px 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.05); }
+    #chart-wrap { position: relative; width: 100%; }
+
+    #data-note { margin-top: 20px; padding: 16px 20px; background: #f0f3ff; border-left: 3px solid #3a5ec8; border-radius: 0 6px 6px 0; font-size: 0.76rem; color: #5a637a; line-height: 1.6; }
+    #data-note strong { color: #1a1d2e; }
+
+    #tooltip { position: fixed; background: #fff; border: 1px solid #d0d5e8; border-radius: 6px; padding: 10px 14px; font-size: 0.78rem; color: #1a1d2e; pointer-events: none; display: none; z-index: 999; max-width: 240px; line-height: 1.6; box-shadow: 0 4px 16px rgba(0,0,0,0.12); }
+    #tooltip .tt-name  { font-weight: 700; color: #1a1d2e; margin-bottom: 4px; font-size: 0.8rem; }
+    #tooltip .tt-gap   { font-size: 1.1rem; font-weight: 700; color: #3a5ec8; }
+    #tooltip .tt-row   { display: flex; justify-content: space-between; gap: 16px; }
+    #tooltip .tt-label { color: #7a86a8; }
+    #tooltip .tt-val   { font-weight: 600; color: #1a1d2e; }
+  </style>
+</head>
+<body>
+
+  <header id="header">
+    <div id="header-left">
+      <h1>Universal Voucher Gap · U.S. Metropolitan Areas</h1>
+      <p>Voucher Gap Ratio by Renter Households · HUD CHAS · 2022</p>
+    </div>
+    <div id="header-right"></div>
+  </header>
+
+  <div id="main">
+
+    <div id="chart-header">
+      <div id="chart-title">
+        Universal Voucher Gap Ratio by Renter Households<br>
+        Across U.S. Metropolitan Areas
+      </div>
+      <div id="chart-subtitle">
+        The number of income-eligible renter households at a given AMI threshold (30%, 50%, or 80%) cumulatively is collected from CHAS 2022 data. The total number of housing vouchers available per geography — collected from the Picture of Subsidized Housing data — is divided by the total income-eligible renter count to determine the share of need currently being met. This value is then subtracted from 1 to obtain the proportion of eligible renters whose housing needs are not covered by vouchers, which represents the <strong>voucher gap ratio</strong>. Select an AMI threshold below to filter by income eligibility.
+      </div>
+
+      <div id="ami-row">
+        <span class="ami-label">AMI THRESHOLD</span>
+        <button class="tog-btn active" data-ami="30">&lt;30% AMI</button>
+        <button class="tog-btn"        data-ami="50">&lt;50% AMI</button>
+        <button class="tog-btn"        data-ami="80">&lt;80% AMI</button>
+      </div>
+    </div>
+
+    <div id="chart-card">
+      <div id="chart-wrap">
+        <canvas id="myChart"></canvas>
+      </div>
+    </div>
+
+    <div id="data-note">
+      <strong>Source:</strong> HUD Comprehensive Housing Affordability Strategy (CHAS) 2018–2022 5-year estimates, aggregated at the Core Based Statistical Area (CBSA) level. Each metropolitan area is identified using Census CBSA delineations.
+    </div>
+
+  </div>
+
+  <div id="tooltip">
+    <div class="tt-name" id="tt-name"></div>
+    <div class="tt-gap"  id="tt-gap"></div>
+    <div style="margin-top:6px">
+      <div class="tt-row"><span class="tt-label">Eligible renter households</span><span class="tt-val" id="tt-eli"></span></div>
+      <div class="tt-row"><span class="tt-label">Total vouchers available to use</span><span class="tt-val" id="tt-vou"></span></div>
+      <div class="tt-row"><span class="tt-label">Unmet need (gap)</span><span class="tt-val" id="tt-ren"></span></div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+  <script>
+    const AMI_CFG = {
+      30: { vgap: 'vg30', eli: 'eli30', label: 'Under 30% AMI' },
+      50: { vgap: 'vg50', eli: 'eli50', label: 'Under 50% AMI' },
+      80: { vgap: 'vg80', eli: 'eli80', label: 'Under 80% AMI' },
+    };
+    let currentAmi = 30;
+    let allData    = [];
+    let chart      = null;
+
+    function shortName(full) {
+      const parts = full.split(',');
+      const city  = parts[0].split('-')[0].trim();
+      const state = parts[1] ? parts[1].trim().split('-')[0].trim() : '';
+      return state ? `${city}, ${state}` : city;
+    }
+    function fmtN(n)   { return n == null ? 'N/A' : Math.round(n).toLocaleString(); }
+    function fmtPct(v) { return v == null ? 'N/A' : (v * 100).toFixed(1) + '%'; }
+
+    // Parse a simple CSV (handles quoted fields)
+    function parseCSVLine(line) {
+      const out = []; let cur = ''; let inQ = false;
+      for (let i = 0; i < line.length; i++) {
+        const ch = line[i];
+        if (ch === '"') { inQ = !inQ; }
+        else if (ch === ',' && !inQ) { out.push(cur.trim()); cur = ''; }
+        else { cur += ch; }
+      }
+      out.push(cur.trim());
+      return out;
+    }
+
+    function renderChart() {
+      const cfg    = AMI_CFG[currentAmi];
+      const sorted = [...allData].sort((a, b) => b[cfg.vgap] - a[cfg.vgap]);
+
+      const labels = sorted.map(r => shortName(r.name));
+      const values = sorted.map(r => r[cfg.vgap] != null ? +(r[cfg.vgap] * 100).toFixed(3) : 0);
+
+      const maxVal = Math.max(...values);
+      const colors = values.map(v => {
+        const t = maxVal > 0 ? v / maxVal : 0;
+        return `rgba(${Math.round(40+t*180)},${Math.round(100-t*70)},${Math.round(200-t*160)},0.85)`;
+      });
+
+      if (chart) {
+        chart.data.labels = labels;
+        chart.data.datasets[0].data            = values;
+        chart.data.datasets[0].backgroundColor = colors;
+        chart.options.scales.y.title.text = `Voucher Gap Ratio · ${cfg.label}`;
+        chart.update('active');
+        chart._sortedData = sorted;
+        return;
+      }
+
+      document.getElementById('myChart').style.height = '380px';
+      chart = new Chart(document.getElementById('myChart').getContext('2d'), {
+        type: 'bar',
+        data: {
+          labels,
+          datasets: [{
+            data:            values,
+            backgroundColor: colors,
+            borderColor:     'transparent',
+            borderRadius:    3,
+            borderSkipped:   false,
+            maxBarThickness: 16,
+            barPercentage:   0.55,
+            categoryPercentage: 0.65,
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          layout: { padding: { top: 10 } },
+          plugins: { legend: { display: false }, tooltip: { enabled: false } },
+          scales: {
+            x: {
+              grid:   { color: '#e8eaf2' },
+              ticks:  { color: '#7a86a8', font: { size: 11 }, maxRotation: 70, minRotation: 70 },
+              border: { color: '#d0d5e8' },
+            },
+            y: {
+              grid:  { color: '#e8eaf2' },
+              ticks: { color: '#7a86a8', font: { size: 11 }, callback: v => v + '%' },
+              title: { display: true, text: `Voucher Gap Ratio · ${cfg.label}`, color: '#7a86a8', font: { size: 11 } },
+              border: { color: '#d0d5e8' },
+            }
+          },
+          onHover: (evt, els) => {
+            document.getElementById('myChart').style.cursor = els.length ? 'pointer' : 'default';
+          }
+        }
+      });
+      chart._sortedData = sorted;
+
+      // Custom tooltip
+      const tooltip = document.getElementById('tooltip');
+      document.getElementById('myChart').addEventListener('mousemove', evt => {
+        const pts = chart.getElementsAtEventForMode(evt, 'index', { intersect: false }, false);
+        if (!pts.length) { tooltip.style.display = 'none'; return; }
+        const rec = chart._sortedData[pts[0].index];
+        const c   = AMI_CFG[currentAmi];
+        document.getElementById('tt-name').textContent = rec.name;
+        document.getElementById('tt-gap').textContent  = fmtPct(rec[c.vgap]) + ' gap ratio';
+        document.getElementById('tt-eli').textContent  = fmtN(rec[c.eli]);
+        document.getElementById('tt-vou').textContent  = fmtN(rec.vouchers);
+        document.getElementById('tt-ren').textContent  = fmtN(rec[c.eli] - rec.vouchers);
+        tooltip.style.display = 'block';
+        tooltip.style.left = Math.min(evt.clientX + 14, window.innerWidth - 260) + 'px';
+        tooltip.style.top  = (evt.clientY - 10) + 'px';
+      });
+      document.getElementById('myChart').addEventListener('mouseleave', () => {
+        tooltip.style.display = 'none';
+      });
+    }
+
+    // AMI toggle
+    document.querySelectorAll('#ami-row .tog-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('#ami-row .tog-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentAmi = +btn.dataset.ami;
+        renderChart();
+      });
+    });
+
+    // Load cbsa_renter.csv — show every unique metro_name as its own bar.
+    fetch('data/cbsa_renter.csv')
+      .then(r => r.text())
+      .then(txt => {
+        const lines = txt.trim().split('\n');
+        const headers = parseCSVLine(lines[0]);
+        const idx = k => headers.indexOf(k);
+
+        const seen = new Set();
+        allData = [];
+        for (let i = 1; i < lines.length; i++) {
+          if (!lines[i].trim()) continue;
+          const vals = parseCSVLine(lines[i]);
+          const name = vals[idx('metro_name')].replace(/^"|"$/g, '');
+          if (seen.has(name)) continue;
+          seen.add(name);
+          allData.push({
+            name,
+            vg30: +vals[idx('vg_30')],
+            vg50: +vals[idx('vg_50')],
+            vg80: +vals[idx('vg_80')],
+            eli30: +vals[idx('total_under30')],
+            eli50: +vals[idx('total_under50')],
+            eli80: +vals[idx('total_under80')],
+            vouchers: +vals[idx('total_served30')],
+          });
+        }
+
+        renderChart();
+      });
+  </script>
+</body>
+</html>

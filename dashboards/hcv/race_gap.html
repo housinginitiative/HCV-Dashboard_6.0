@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Voucher Gap by Race</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <link rel="stylesheet" href="race_gap.css" />
+</head>
+<body>
+
+  <header id="header">
+    <div id="header-left">
+      <h1>Universal Voucher Gap by Race and Ethnicity</h1>
+      <p>Gap Analysis for People of Color Households by Income Threshold · 2022</p>
+    </div>
+  </header>
+
+  <div id="app">
+    <!-- Controls -->
+    <div id="controls">
+      <div class="control-group">
+        <label class="control-label">SELECT AMI THRESHOLD:</label>
+        <div class="toggle-group" id="threshold-toggle">
+          <button class="toggle-btn active" data-threshold="30">&lt;30% AMI</button>
+          <button class="toggle-btn" data-threshold="50">&lt;50% AMI</button>
+          <button class="toggle-btn" data-threshold="80">&lt;80% AMI</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart Container -->
+    <div id="chart-container">
+      <canvas id="gapChart"></canvas>
+    </div>
+
+    <!-- Legend/Info -->
+    <div id="info">
+      <p><strong>Interpretation:</strong> Gap values represent the proportion of households without access to vouchers. Higher values indicate larger voucher gaps for people of color households.</p>
+    </div>
+  </div>
+
+  <script src="race_gap.js"></script>
+</body>
+</html>

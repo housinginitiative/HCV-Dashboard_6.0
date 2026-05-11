@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="470" viewBox="0 0 980 470"><style>
+text{font-family:Lato,Arial,sans-serif}
+.title{font-family:Montserrat,Arial,sans-serif;font-size:22px;font-weight:700;fill:#1f2a3d}
+.subtitle{font-size:13px;fill:#687386}
+.caption{font-size:11px;fill:#687386}
+.axis{font-size:12px;fill:#687386}
+.label{font-size:13px;fill:#1f2a3d}
+.inbar-label{font-size:12px;font-weight:700;fill:#fff}
+.inbar-dark{font-size:12px;font-weight:700;fill:#1f2a3d}
+.small-label{font-size:12px;fill:#687386}
+.value{font-size:13px;font-weight:700;fill:#1f2a3d}
+.grid{stroke:#e8ecf2;stroke-width:1}
+.baseline{stroke:#4d596b;stroke-width:1.3}
+.hcv{fill:#b98678}
+.renter{fill:#77a9bf}
+.neg{fill:#b98678}
+.pos{fill:#d8b36c}
+</style><text x="0" y="28" class="title">Negative gaps dominate</text><text x="0" y="50" class="subtitle">Metro areas by overall opportunity gap</text><line x1="50" y1="385" x2="950" y2="385" class="grid"/><text x="32" y="390" class="axis" text-anchor="end">0</text><line x1="50" y1="284" x2="950" y2="284" class="grid"/><text x="32" y="289" class="axis" text-anchor="end">50</text><line x1="50" y1="183" x2="950" y2="183" class="grid"/><text x="32" y="188" class="axis" text-anchor="end">100</text><line x1="50" y1="82" x2="950" y2="82" class="grid"/><text x="32" y="87" class="axis" text-anchor="end">150</text><rect x="59" y="354.4453781512605" width="110.57142857142858" height="30.554621848739497" class="neg" opacity="0.9"/><text x="114.28571428571429" y="342.4453781512605" class="value" text-anchor="middle">12</text><text x="114.28571428571429" y="419" class="axis" text-anchor="middle">-25 to -20</text><rect x="187.57142857142858" y="278.05882352941177" width="110.57142857142858" height="106.94117647058825" class="neg" opacity="0.9"/><text x="242.8571428571429" y="266.05882352941177" class="value" text-anchor="middle">42</text><text x="242.8571428571429" y="419" class="axis" text-anchor="middle">-20 to -15</text><rect x="316.14285714285717" y="140.56302521008402" width="110.57142857142858" height="244.43697478991598" class="neg" opacity="0.9"/><text x="371.42857142857144" y="128.56302521008402" class="value" text-anchor="middle">96</text><text x="371.42857142857144" y="419" class="axis" text-anchor="middle">-15 to -10</text><rect x="444.7142857142858" y="82" width="110.57142857142858" height="303" class="neg" opacity="0.9"/><text x="500.00000000000006" y="70" class="value" text-anchor="middle">119</text><text x="500.00000000000006" y="419" class="axis" text-anchor="middle">-10 to -5</text><rect x="573.2857142857143" y="150.74789915966386" width="110.57142857142858" height="234.25210084033614" class="neg" opacity="0.9"/><text x="628.5714285714287" y="138.74789915966386" class="value" text-anchor="middle">92</text><text x="628.5714285714287" y="419" class="axis" text-anchor="middle">-5 to 0</text><rect x="701.8571428571429" y="326.43697478991595" width="110.57142857142858" height="58.563025210084035" class="pos" opacity="0.9"/><text x="757.1428571428572" y="314.43697478991595" class="value" text-anchor="middle">23</text><text x="757.1428571428572" y="419" class="axis" text-anchor="middle">0 to 5</text><rect x="830.4285714285716" y="377.3613445378151" width="110.57142857142858" height="7.638655462184874" class="pos" opacity="0.9"/><text x="885.7142857142859" y="365.3613445378151" class="value" text-anchor="middle">3</text><text x="885.7142857142859" y="419" class="axis" text-anchor="middle">5 to 10</text><text x="0" y="452" class="caption">361 of 387 metro areas have negative overall opportunity gaps.</text></svg>
